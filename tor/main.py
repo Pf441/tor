@@ -38,6 +38,17 @@ from tor.helpers.flair import set_meta_flair_on_other_posts
 # https://www.youtube.com/watch?v=hX3j0sQ7ot8
 
 
+def debug_run(config):
+    """
+    Primary routine for testing.
+
+    :param config: Global config dict, supplied by tor_core.
+    :return: None.
+    """
+    print('Running...')
+    time.sleep(3)
+
+
 def run(config):
     """
     Primary routine.
@@ -66,7 +77,11 @@ def main():
 
     build_bot(bot_name, __version__, full_name='u/ToR')
     config.perform_header_check = True
-    run_until_dead(run)
+
+    # In order to gain normal functionality, swap the following 2
+    # lines for which one is commented vs. uncommented.
+    run_until_dead(debug_run)
+    # run_until_dead(run)
 
 
 if __name__ == '__main__':
