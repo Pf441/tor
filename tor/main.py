@@ -48,7 +48,7 @@ def run(config):
     """
     check_inbox(config)
 
-    for sub in config.subreddits_to_check:
+    for sub in config.subreddits:
         check_submissions(sub, config)
 
     set_meta_flair_on_other_posts(config)
@@ -66,7 +66,7 @@ def main():
         bot_name = os.environ.get('BOT_NAME', 'bot')
 
     build_bot(bot_name, __version__, full_name='u/ToR')
-    config.perform_header_check = True
+    config.perform_footer_check = True
     run_until_dead(run)
 
 

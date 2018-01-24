@@ -13,7 +13,7 @@ rules_comment = (
     '\n\nThis is a(n) {post_type} post, so please use the following formatting:'
     '\n\n---\n\n{formatting}\n\n---'
     '\n\nFooter\n---\n\nWhen you\'re done, please put the following footer at '
-    'the **bottom** of your post:\n\n---\n\n{header}\n\n---'
+    'the **bottom** of your post:\n\n---\n\n{footer}\n\n---'
     '\n\nIf you have any questions, feel free to [message the mods!]'
     '(https://www.reddit.com/message/'
     'compose?to=%2Fr%2FTranscribersOfReddit&subject=General%20Question'

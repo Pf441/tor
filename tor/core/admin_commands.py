@@ -98,7 +98,7 @@ def process_command(reply, config):
 
 
 def from_moderator(reply, config):
-    return reply.author in config.tor_mods
+    return reply.author in config.mods
 
 
 def process_override(reply, config):
@@ -156,7 +156,7 @@ def process_blacklist(reply, config):
     already_added = []
 
     for username in usernames:
-        if username in config.tor_mods:
+        if username in config.mods:
             results += f'{username} is a mod! Don\'t blacklist mods!\n'
             failed.append(username)
             continue

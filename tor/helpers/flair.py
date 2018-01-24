@@ -133,7 +133,7 @@ def set_meta_flair_on_other_posts(config):
 
         if (
             post.author != config.r.redditor('transcribersofreddit') and
-            post.author not in config.tor_mods and
+            post.author not in config.mods and
             post.link_flair_text != flair.meta
         ):
             logging.info(

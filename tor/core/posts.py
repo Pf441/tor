@@ -127,7 +127,7 @@ def process_post(new_post, config):
                 rules_comment.format(
                     post_type=content_type,
                     formatting=content_format,
-                    header=config.header
+                    header=config.footer
                 )
             )
         )

@@ -18,7 +18,7 @@ def _footer_check(reply, config, tor_link=ToR_link):
     :param tor_link: String; the magical url key.
     :return: True / None.
     """
-    if config.perform_header_check:
+    if config.perform_footer_check:
         return tor_link in reply.body
     else:
         # If we don't want the check to take place, we'll just return

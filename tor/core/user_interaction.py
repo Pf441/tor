@@ -75,9 +75,8 @@ def process_claim(post, config):
     try:
         if not coc_accepted(post, config):
             # do not cache this page. We want to get it every time.
-            post.reply(_(
-                please_accept_coc.format(get_wiki_page('codeofconduct', config))
-            ))
+            with open(config.config_location + '/bots/codeofconduct.md') as coc:
+                post.reply(_(please_accept_coc.format(coc.readlines())))
             return
 
         if top_parent.link_flair_text is None:
